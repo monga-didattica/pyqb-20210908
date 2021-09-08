@@ -46,7 +46,7 @@ import pymc3 as pm   # type: ignore
 
 pass
 
-# ### Exercise 2 (max 5 points)
+# ### Exercise 2 (max 7 points)
 #
 #
 # Define a function to approximate the solution of the differential equation by leveraging on the [Euler method](https://en.wikipedia.org/wiki/Euler_method), considering that $\lim_{\Delta t \to 0} f(t + \Delta t) = f(t) + dt\cdot\frac{df}{dt}$. The function should take also the initial value for $t = 0$.
@@ -61,9 +61,9 @@ pass
 
 pass
 
-# ### Exercise 4 (max 7 points)
+# ### Exercise 4 (max 5 points)
 #
-# Experiments on *exambirulobin* samples resulted in the values stored in a file `values.csv` (first column). The corresponding measurements of the Calcium in the cell were recorded in the second column of `values.csv`
+# Experiments on *exambirulobin* samples resulted in the values stored in a file `values.csv` (first column). The corresponding measurements of the Calcium in the cell were recorded in the second column of `values.csv`. Read the values in the first column in a numpy ndarray.
 
 pass
 
