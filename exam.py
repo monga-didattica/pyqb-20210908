@@ -5,9 +5,9 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.11.4
+#       jupytext_version: 1.11.5
 #   kernelspec:
-#     display_name: Python 3 (ipykernel)
+#     display_name: Python 3
 #     language: python
 #     name: python3
 # ---
@@ -46,7 +46,11 @@ import pymc3 as pm   # type: ignore
 # To get the full marks, you should declare correctly the type hints (the signature of the function) and add a doctest string.
 
 def deriv(y: float, a: float = 0.1, b: float = 0.02, c: float = 0.03) -> float:
-    """Returns the exambirubolin change over time as a function of exambirubolin value.  
+    """Returns the exambirubolin change over time as a function of exambirubolin value.
+    
+    
+    >>> deriv(0)
+    0.1
     """
     return a + b*y + b*y**2
 
@@ -63,6 +67,9 @@ from typing import Callable
     
 def approx_euler(t: np.ndarray, f0: float, dfun: Callable[[float], float]) -> np.ndarray:
     """Compute the Euler approximation of a function on times t, with derivative dfun.
+    
+    >>> approx_euler(np.array([0.0]), 42., deriv)
+    array([42.])
     """
     res = np.zeros(len(t))
     res[0] = f0
